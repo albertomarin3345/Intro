@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Entrada</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+        #video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+        #content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            font-size: 2em; 
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <video id="video" autoplay muted>
+        <source src="Navidad_1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div id="content">
+        <h1>Felíz Navidad</h1>
+        <p>Espera unos segundos...</p>
+    </div>
+    <script>
+        setTimeout(function() {
+            window.location.href = 'https://albertomarin3345.github.io/Navidad/'; // Redirect to the specified URL
+        }, 5000);
+    </script>
+</body>
+</html>
